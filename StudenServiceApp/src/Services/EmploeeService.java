@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Domen.Emploee;
-import Domen.Student;
 
 public class EmploeeService implements iPersonService<Emploee> {
         private int count;
@@ -13,14 +12,13 @@ public class EmploeeService implements iPersonService<Emploee> {
         this.emploees = new ArrayList<Emploee>();
     }
     
-@Override
+    @Override
     public List<Emploee> getAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+        return emploees;
     }
 @Override
-    public void create(String firstName, int age) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'create'");
+    public void create(String firstName, int age, String profession) {
+        Emploee per = new Emploee(firstName, age, profession);
+                emploees.add(per);
     }    
 }

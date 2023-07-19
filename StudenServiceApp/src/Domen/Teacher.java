@@ -6,4 +6,16 @@ public class Teacher extends Person{
         super(firstName, age);
         this.acadDegree = acadDegree;
     }
+    public String getAcadDegree() {
+        return acadDegree;
+    }
+
+    public void setAcadDegree(String acadDegree) {
+        this.acadDegree = acadDegree;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher [age = " + super.getAge() + ", name = " + super.getName() + ", Academic Degree = " + acadDegree + "]";
+    }
 }

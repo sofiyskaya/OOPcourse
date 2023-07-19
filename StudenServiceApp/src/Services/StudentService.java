@@ -20,7 +20,7 @@ public class StudentService implements iPersonService<Student> {
     }
 
     @Override
-    public void create(String firstName, int age) {
+    public void create(String firstName, int age, String progress) {
         Student per = new Student(firstName,age,count);
         count++;
         students.add(per);
